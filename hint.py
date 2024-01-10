@@ -115,10 +115,10 @@ def hint_d(fcombination: Tuple[int, ...]) -> int:
     return numbers[-1] - numbers[0]
 
 
-def hint_c(fcombination: Tuple[int, ...]) -> bool:
-    """Return a boolean indication if the C tile is strictly greater than 4."""
+def hint_c(fcombination: Tuple[int, ...]) -> str:
+    """Return an indication if the C tile is strictly greater than 4."""
     numbers = cb.fcombination_to_numbers(fcombination)
-    return numbers[2] > 4
+    return 'y' if numbers[2] > 4 else 'n'
 
 
 def _hint_x(fcombination: Tuple[int, ...], x_tile: int) -> str:
